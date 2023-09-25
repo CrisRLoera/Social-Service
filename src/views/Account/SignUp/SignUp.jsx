@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const SignUp = () => {
-    // Contenido del componente SignUp
+function App() {
+    const [count, setCount] = useState(0);
+
+    const incrementCount = () => {
+        setCount(count + 1);
+    };
+
+    return (
+        <div className="App">
+            <h1>Contador React</h1>
+            <p>Valor actual del contador: {count}</p>
+            <button onClick={incrementCount}>Incrementar</button>
+        </div>
+    );
 }
 
-export default SignUp; // Exporta el componente como 'default'
+export default App;
