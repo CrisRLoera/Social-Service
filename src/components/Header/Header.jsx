@@ -1,4 +1,4 @@
-import { AppBar, Button, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Stack, Toolbar, Typography } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom'
 

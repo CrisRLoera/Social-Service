@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { AppBar, Button, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Stack, Toolbar } from "@mui/material";
+import './DropdownMenu.css'
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,10 @@ const DropdownMenu = () => {
   };
 
   return (
-    <Toolbar className='dropdown-button'>
-
-        <Stack direction="row" spacing={2}>
+    <>
+      <AppBar position="static">
+        <Toolbar className='dropdown-button'>
+          <Stack direction="row" spacing={2}>
             <button className="dropdown-button" onClick={toggleDropdown}>
               Carreras
             </button>
@@ -22,9 +24,10 @@ const DropdownMenu = () => {
                 <li>Carrera 3</li>
               </ul>
             )}
-        </Stack>
-
-    </Toolbar>
+          </Stack>
+        </Toolbar>
+      </AppBar>
+    </>
 
   );
 };
