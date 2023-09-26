@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import "./signUp.css"
+import FormInput from "../../../components/FormInput/FormInput"
 
-function App() {
-    const [count, setCount] = useState(0);
-
-    const incrementCount = () => {
-        setCount(count + 1);
-    };
+const Form = () => {
+    const [username, setUsername] = useState("")
+    console.log(username)
 
     return (
-        <div className="App">
-            <h1>Contador React</h1>
-            <p>Valor actual del contador: {count}</p>
-            <button onClick={incrementCount}>Incrementar</button>
+        <div className="signUp">
+            <form>
+                <FormInput placeholder="First name" setUsername={setUsername} />
+                <FormInput placeholder="Last name" />
+                <FormInput placeholder="Email" />
+                <FormInput placeholder="School" />
+                <FormInput placeholder="Date of birth" />
+            </form>
         </div>
     );
-}
+};
 
-export default App;
+export default Form;
+

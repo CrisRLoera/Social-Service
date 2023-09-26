@@ -8,6 +8,9 @@ export default function Header() {
             <Toolbar sx={{ justifyContent: "flex-end" }}>
                 <Stack direction="row" spacing={2}>
                     <PersonIcon fontSize="large" />
+                    <Link to={'/'}>
+                        <Button variant="contained" size="small">Home</Button>
+                    </Link>
                     <Button variant="contained" size="small">Iniciar sesión</Button>
                     <Link to={'/registro'}>
                         <Button variant="contained" size="small">Registro</Button>
