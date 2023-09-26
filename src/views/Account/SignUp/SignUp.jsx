@@ -12,6 +12,8 @@ const Form = () => {
                 <FormInput placeholder="First name" setUsername={setUsername} />
                 <FormInput placeholder="Last name" />
                 <FormInput placeholder="Email" />
+                <FormInput placeholder="Password"/>
+                <FormInput placeholder="Confirm Password"/>
                 <FormInput placeholder="School" />
                 <FormInput placeholder="Date of birth" />
             </form>
