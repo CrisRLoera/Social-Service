@@ -1,35 +1,58 @@
 import React, { useState } from 'react';
 import { AppBar, Stack, Toolbar } from "@mui/material";
 import './DropdownMenu.css'
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
-const DropdownMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function BasicMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const buttonStyle = {
+    backgroundColor: 'yellow', 
+    color: 'black', 
   };
 
   return (
-    <>
-      <AppBar position="static">
-        <Toolbar className='dropdown-button'>
-          <Stack direction="row" spacing={2}>
-            <button className="dropdown-button" onClick={toggleDropdown}>
-              Carreras
-            </button>
-            {isOpen && (
-              <ul className="dropdown-menu">
-                <li>Ingenieria en Tecnología de Procesos</li>
-                <li>Carrera 2</li>
-                <li>Carrera 3</li>
-              </ul>
-            )}
-          </Stack>
-        </Toolbar>
-      </AppBar>
-    </>
-
+    <div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        style={buttonStyle} 
+      >
+        Carreras
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose}>Ingeniero Aeroespacial</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero Civil</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero en Ciencias de la Computación</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero en Minas y Metalurgista</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero en Sistemas Computacionales en Hardware</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero en Sistemas Topográficos</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero Físico</MenuItem>
+        <MenuItem onClick={handleClose}>Ingenieria en Tecnología de Procesos</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero Geólogo</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero Matemático</MenuItem>
+        <MenuItem onClick={handleClose}>Ingeniero de Software</MenuItem>
+      </Menu>
+    </div>
   );
-};
-
-export default DropdownMenu;
+}
