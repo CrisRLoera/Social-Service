@@ -19,8 +19,16 @@
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Clone Repository
+
 ```
 git clone git@github.com:CrisRLoera/Social-Service.git
+```
+
+### For the frontend
+
+Go inside the folder Client and install the following comands
+```
+npm install
 ```
 
 UI-Materials
@@ -28,6 +36,15 @@ UI-Materials
 npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
 npm install @mui/icons-material --legacy-peer-deps
 ```
+### For the backend
+
+Go inside the Client file and use the following comands
+
+```
+npm install express
+npm install nodemon -D
+```
+
 
 ### Prerequisites
 
