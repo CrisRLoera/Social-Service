@@ -72,9 +72,10 @@ const Form = () => {
 
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
+        console.log(values);
     }
 
-    console.log(values);
+    
     return (
         <div className="signUp">
             <form onSubmit={handleSubmit}>
