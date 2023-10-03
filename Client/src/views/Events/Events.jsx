@@ -17,8 +17,7 @@ export default function Events() {
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination,]}
-          slidesPerView={2}
-          spaceBetween={16}
+          slidesPerView={3}
           loop={true}
           navigation={true}
           pagination={{
@@ -26,7 +25,46 @@ export default function Events() {
           }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          className='events-slider'
         >
+          <SwiperSlide className='event-slide'>
+            <Swiper
+              effect={'cards'}
+              grabCursor={true}
+              loop={true}
+              modules={[EffectCards]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+            </Swiper>
+          </SwiperSlide>
+          <SwiperSlide className='event-slide'>
+            <Swiper
+              effect={'cards'}
+              grabCursor={true}
+              loop={true}
+              modules={[EffectCards]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+              <SwiperSlide>
+                <EventItem></EventItem>
+              </SwiperSlide>
+            </Swiper>
+          </SwiperSlide>
           <SwiperSlide className='event-slide'>
             <Swiper
               effect={'cards'}

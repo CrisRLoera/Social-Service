@@ -3,7 +3,7 @@ import './EventItem.css';
 
 const EventItem = () => {
     return (
-        <Paper elevation={2}>
+        <Paper elevation={5}>
             <div className="eventItem">
                 <div className="image-container">
                     <img src="https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" className="image img-fluid" />
