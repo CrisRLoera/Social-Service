@@ -8,14 +8,17 @@ const primary = {
     light: '#42a5f5',
     dark: '#1565c0',
     contrastText: '#fff',
-  };
+};
 
 export default function Header() {
     return (
-        <AppBar position="static" sx={{backgroundColor: primary.main}}>
+        <AppBar position="static" sx={{ backgroundColor: primary.main }}>
             <Toolbar sx={{ padding: 0 }} color="primary">
                 <Stack direction="row" spacing={2} sx={{ flexGrow: 1, alignItems: 'center' }}>
                     <DropdownMenu />
+                    <Link to={'/events'}>
+                        <Button variant="contained" size="small">Eventos</Button>
+                    </Link>
                 </Stack>
                 <Stack direction="row" spacing={2}>
                     <PersonIcon fontSize="large" />

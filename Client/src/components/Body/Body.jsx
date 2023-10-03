@@ -12,9 +12,6 @@ export default function Body() {
 
     return (
         <div style={containerStyle}>
-            <Link to={'/events'}>
-                <Button variant="contained" size="small">Eventos</Button>
-            </Link>
         </div>
     )
 }
