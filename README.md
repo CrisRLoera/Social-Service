@@ -24,7 +24,7 @@ Clone Repository
 git clone git@github.com:CrisRLoera/Social-Service.git
 ```
 
-### For the frontend
+### For the frontend - client
 
 Go inside the folder Client and install the following comands
 ```
