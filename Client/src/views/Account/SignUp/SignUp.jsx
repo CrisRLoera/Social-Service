@@ -48,9 +48,9 @@ const Form = () => {
             id: 4,
             name: "school",
             type: "text",
-            placeholder: "School",
+            placeholder: "Escuela",
             errorMessage: "La escuela no se encuentra",
-            label: "school",
+            label: "Escuela",
             required: true,
         },
         {
@@ -58,16 +58,16 @@ const Form = () => {
             name: "dateOfBirth",
             type: "date",
             placeholder: "Fecha de nacimiento",
-            label: "dateOfBirth",
+            label: "Día de nacimiento",
             required: true,
         },
         {
             id: 6,
             name: "password",
             type: "password",
-            placeholder: "Password",
+            placeholder: "Contraseña",
             errorMessage: "La contraseña debe ser minimo de 8 a 20 caracteres y debe incluir almenos una letra, numero y caracter especial",
-            label: "password",
+            label: "Contraseña",
             pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*.])[a-zA-Z0-9!@#$%^&*.]{8,20}$`,
             required: true,
         },
@@ -99,7 +99,7 @@ const Form = () => {
                 {inputs.map((input) => (
                     <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
                 ))}
-                <button>Submit</button>
+                <button>Registrarse</button>
             </form>
         </div>
     );
